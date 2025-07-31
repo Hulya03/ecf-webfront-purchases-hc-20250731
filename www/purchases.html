@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande d'achats</title>
-    <link rel="stylesheet" href="css/purchaise.css">
+    <link rel="stylesheet" href="css/purchases.css">
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header class="title">
@@ -15,6 +16,73 @@
     <main>
 
         <form class="purchase">
+
+            <fieldset>
+                <legend>Identité du demandeur</legend>
+                <label for="nom">Nom * :</label>
+                <input type="text" id="nom" required placeholder="Nom de famille" title="Entrez votre nom de famille">
+                <label for="prenom">Prénom * :</label>
+                <input type="text" id="prenom" required placeholder="Prénom" title="Entrez votre prénom">
+                <label for="telephone">Téléphone * : </label>
+                <input type="tel" id="telephone" required placeholder="Numéro de téléphone">
+                <label for="email">Adresse e-mail * :</label>
+                <input type="email" id="email" required placeholder="Adresse e-mail" title="Entrez votre adresse e-mail">
+                <label for="service">Nom du service :</label>
+                <select id="service" title="Choisissez votre service"> 
+                    <option selected></option>                    
+                    <option>Comptabilité</option>
+                    <option>Ressources humaines</option>
+                    <option>Service informatique</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Détails de l'article</legend>
+                <label for="nomArticle">Nom de l'article * :</label>
+                <input type="text" id="nomArticle" required placeholder="Nom de l'article" title="Entrez le nom de l'article">
+                <label for="descriptionArticle">Description de l'article :</label>
+                <textarea id="descriptionArticle" cols="60" rows="10" placeholder="Description de l'article" title="Entrez les détails de l'article"></textarea>
+                <label for="quantite">Quantité *: </label>
+                <input type="number" id="quantite" min="1" max="1000" required placeholder="Quantité" title="Entrez la quantité">
+                <label for="prixUnitaire">Prix unitaire (arrondi à l'Euro supérieur) * : </label>
+                <input type="number" id="prixUnitaire" step="1" required placeholder="Prix unitaire" title="Entre le prix unitaire arrondi à l'Euro supérieur" >
+                <label for="prixTotal">Prix Total * :</label>
+                <input type="number" id="prixTotal" placeholder="Prix total" required title="Entrez le prix total">
+                <label for="dateLivraison">Date de Livraison souhaitée * :</label>
+                <input type="date" required title="Entrez la date de livraison souhaitée">
+                <p class="intituleAdresse">
+                    Adresse de livraison
+                </p>
+                <label for="numAdresseLivraison">Numéro de rue * :</label>
+                <input type="number" id="numAdresseLivraison" placeholder="Numéro de rue" min="1" max="99999" step="1" required title="Entrez le numéro de rue">
+                <select id="infoCompRue" title="Entrez informations complémentaire au numéro de rue">
+                    <option selected></option>
+                    <option>Bis</option>
+                    <option>C</option>
+                    <option>Ter</option>
+                </select>
+                <label for="nomRue">Nom de la rue * : </label>
+                <input type="text" id="nomRue" placeholder="Nom de la rue" required title="Entrez le nom de la rue">
+                <label for="codePostal">Code postal * :</label>
+                <input type="text" id="codePostal" placeholder="Code postal" required title="Entrez le code postal">
+                <label for="commune">Commune *:</label>
+                <input type="text" id="commune" placeholder="Commune" required title="Entrez la commune">                
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations concernant la demande</legend>
+                <label for="infoSupp">Remarques :</label>
+                <textarea id="infosupp" cols="60" rows="10" placeholder="Explication de la nécessité de l'achat"></textarea>
+            </fieldset>
+
+            <div id="result">
+
+            </div>
+
+            <div class="btn">
+                <button type="submit" id="btnEnvoyer">Envoyer la demande</button>
+                <button type="reset" id="btnAnnuler">Annuler</button>
+            </div>
 
         </form>
 

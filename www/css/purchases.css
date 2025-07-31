@@ -1,7 +1,7 @@
 /*
 PURCHASES CSS
 
-@author: NOM Prénom
+@author: CETIN Hülya
 @version: 1.0
 @date: 2025-07-31
 @description: Code CSS pour la page des demandes d'achats.
@@ -18,11 +18,92 @@ PURCHASES CSS
     --crm-success: #488287;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
 body {
+    font-size: 1.6rem;
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;   /* Vous pouvez modifier la police */
-    background-color: var(--dark);   /* Vous pouvez changer la couleur de fond */
+    background-color: var(--crm-ofp);   /* Vous pouvez changer la couleur de fond */
     color: var(--light);   /* Vous pouvez changer la couleur du texte */
 }
 
+main {
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: var(--crm-primary);
+    width : 120rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: var(--crm-primary);
+}
+
+.title > img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+legend {
+    color: var(--crm-secondary);
+}
+
+fieldset {
+    border: var(--crm-secondary) 0.3rem solid;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label, input {
+    flex-basis: 40%;
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+
+footer {
+    width : 120rem;
+    max-width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex ;
+    flex-direction: column;
+    gap : 0.7rem;
+}
+
+#btnEnvoyer,  #btnAnnuler {
+    width : 20rem;
+    margin: 0 auto;
+    padding : .6rem;
+}
+
+.intituleAdresse {
+    position: absolute;
+    top : 63rem;
+    text-decoration-line :underline
+}
+
+ input[type="date"] {
+    margin-bottom : 4rem;
+ }
